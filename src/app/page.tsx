@@ -36,7 +36,15 @@ export default function Home() {
           <div className="flex gap-4 mt-2">
             {["Auto", "Light", "Dark"].map((theme, idx) => (
               <div key={idx} className="flex flex-col flex-1 items-center">
-                <div className={`w-full h-20 rounded-md ${theme === "Auto" ? "bg-purple-100" : theme === "Light" ? "bg-gray-100 border-2 border-blue-500" : "bg-purple-700"}`}></div>
+                <div
+                  className={`w-full h-20 rounded-md ${
+                    theme === "Auto"
+                      ? "bg-purple-100"
+                      : theme === "Light"
+                      ? "bg-gray-100 border-2 border-blue-500"
+                      : "bg-purple-700"
+                  }`}
+                ></div>
                 <span className="text-xs mt-1">{theme}</span>
               </div>
             ))}
@@ -49,11 +57,11 @@ export default function Home() {
             <label className="text-sm font-medium">Accent color</label>
             <div className="flex gap-2 ml-auto">
               {["red", "yellow", "green", "blue", "purple"].map((color) => (
-                <div key={color} className={`w-6 h-6 bg-${color}-500 rounded-full`} />
+                <div key={color} className={`w-6 h-6 rounded-full bg-${color}-500`} />
               ))}
             </div>
           </div>
-          <p className="text-sm text-gray-500 mt-2">Pick your platform's main color</p>
+          <p className="text-sm text-gray-500 mt-2">Pick your platform&apos;s main color</p>
         </div>
 
         {/* Toggles */}
